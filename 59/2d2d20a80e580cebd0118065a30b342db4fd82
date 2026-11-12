@@ -1,0 +1,31 @@
+test/config-multi-host/test.json
+  s_29583764a790dc::t_e20e69aa918058 1-3
+test/config-multi-host/test-development.json
+  s_29583764a790dc::t_e20e69aa918058 1-3
+test/config-multi-host/test.example.com-development.json
+  s_29583764a790dc::t_e20e69aa918058 1-3
+test/config-multi-host/local.json
+  s_29583764a790dc::t_e20e69aa918058 1-3
+test/0-util.js
+  s_29583764a790dc::t_31acf472244fb1 1720-1741
+test/config-multi-host/local-development.json
+  s_29583764a790dc::t_e20e69aa918058 1-3
+test/config-multi-host/test.example.com.json
+  s_29583764a790dc::t_e20e69aa918058 1-3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.52-trip",
+  "base_commit_sha": "592d2d20a80e580cebd0118065a30b342db4fd82",
+  "prompts": {},
+  "sessions": {
+    "s_29583764a790dc": {
+      "agent_id": {
+        "tool": "deepseekharness",
+        "id": "e153c122-5a3e-4126-b010-8c89025debb7",
+        "model": "deepseek-v4.1-flash"
+      },
+      "human_author": "yuxuan.weng <wengyx@trip.com>"
+    }
+  }
+}
