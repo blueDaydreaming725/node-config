@@ -109,6 +109,20 @@ Running in this configuration, the `port` and `dbName` elements of `dbConfig`
 will come from the `default.json` file, and the `host` element will
 come from the `production.json` override file.
 
+Multiple Deployments
+--------------------
+
+`NODE_CONFIG_ENV` accepts a comma-separated list of deployments. Later files
+override earlier files. Generic short hostname, full hostname, and `local` files
+load once before all of their deployment-specific variants. For example, with
+`NODE_CONFIG_ENV=production,eu`, `local.json` loads before
+`local-production.json` and `local-eu.json`.
+
+**Upgrading:** If an existing multi-deployment configuration relies on generic
+hostname or `local` files overriding their deployment-specific variants, review
+those files before upgrading because the corrected order changes which value
+wins.
+
 TypeScript
 ----------
 
