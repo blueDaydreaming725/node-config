@@ -113,10 +113,12 @@ Multiple Deployments
 --------------------
 
 `NODE_CONFIG_ENV` accepts a comma-separated list of deployments. Later files
-override earlier files. Generic short hostname, full hostname, and `local` files
-load once before all of their deployment-specific variants. For example, with
-`NODE_CONFIG_ENV=production,eu`, `local.json` loads before
-`local-production.json` and `local-eu.json`.
+override earlier files. Generic short hostname, full hostname, and `local`
+basenames are added before their deployment-specific variants. For example,
+with `NODE_CONFIG_ENV=production,eu`, `local-production.json` and
+`local-eu.json` override `local.json`. Each file loads only once; if a filename
+matches multiple roles (for example, a host named `local-production`), its last
+matching role determines its position.
 
 **Upgrading:** If an existing multi-deployment configuration relies on generic
 hostname or `local` files overriding their deployment-specific variants, review
